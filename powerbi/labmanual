@@ -109,6 +109,8 @@ Exercise #1 Preparing Data
 	Customer Age = IF( FORMAT('customer'[BirthDate], "MMDD") <= FORMAT(TODAY), "MMDD"),
 				   DATEDIFF('customer'[BirthDate], TODAY(), YEAR),
 				   DATEDIFF('customer'[BirthDate], TODAY(), YEAR) - 1)
+				   
+				 [  note -( if customers birth date is < todays date, then print age difference(todays year - birth year) else print {(todays year - birth year)-1} ]
 
 	Experiment #5: Age Breakdown using switch()
 	Customer Query
